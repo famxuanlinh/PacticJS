@@ -182,6 +182,65 @@
 
     // Bài 19: Tính S(n) = 1 + x + x^3/3! + x^5/5! + … + x^(2n+1)/(2n+1)!
 
+    //Bài 20: Liệt kê tất cả các “ước số” của số nguyên dương n
+    // const arr = (n, i) => {
+    //     for (i = 1; i <= n; i++) {
+    //         if ( n % i === 0) {
+    //             // return i
+    //             console.log("🚀 ~ file: index.html ~ line 192 ~ arr ~ i", i)
+    //         }
+    //     }
+    // }
+    // arr(24)
+    // Bài 21: Tính tổng tất cả các “ước số” của số nguyên dương n
+    // var s = 0;
+    // const arr = (n, i) => {
+    // for (i = 1; i <= n; i++) {
+    //     if ( n % i === 0) {
+    //             s = s + i
+    //             console.log("🚀 ~ file: index.html ~ line 192 ~ arr ~ i", i)
+    //         }
+    //     }
+    //     console.log("🚀 ~ file: index.html ~ line 201 ~ arr ~ s", s)
+    // }
+    // arr(6)
+
+    // Bài 22: Tính tích tất cả các “ước số” của số nguyên dương n
+    // var s = 1;
+    // const arr = (n, i) => {
+    // for (i = 1; i <= n; i++) {
+    //     if ( n % i === 0) {
+    //             s = s * i
+    //             console.log("🚀 ~ file: index.html ~ line 192 ~ arr ~ i", i)
+    //         }
+    //     }
+    //     console.log("🚀 ~ file: index.html ~ line 201 ~ arr ~ s", s)
+    // }
+    // arr(4)
+
+    // Bài 23: Đếm số lượng “ước số” của số nguyên dương n
+    var s = 0;
+    const arr = (n, i) => {
+    for (i = 1; i <= n; i++) {
+        if ( n % i === 0) {
+            console.log(i)
+                s++
+            }
+        }
+        console.log("🚀 ~ file: index.html ~ line 201 ~ arr ~ s", s)
+    }
+    arr(4)
+
+    // Bài 24: Liệt kê tất cả các “ước số lẻ” của số nguyên dương n
+    // var s = 0;
+    // const arr = (n, i) => {
+    // for (i = 1; i <= n; i++) {
+    //     if ( n % i == 0 && i % 2 != 0) {
+    //             console.log("🚀 ~ file: index.html ~ line 201 ~ arr ~ s", i)
+    //         }
+    //     }
+    // }
+    // arr(14)
     </script>
 </body>
 </html>
