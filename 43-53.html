@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Bài 43: Hãy đếm số lượng chữ số của số nguyên dương n
+      // var count = 0;
+      // const CountNum = (n, i) => {
+      //     for (i = 1; i <= n; i++)
+      //     if (n = n / 10 ) {
+      //         count = count + 1;
+      //     }
+      //     console.log(count)
+      // }
+      // CountNum(9999)
+
+      // Bài 44: Hãy tính tổng các chữ số của số nguyên dương n
+      // var count = 0;
+      // const CountNum = (n, i) => {
+      //     for (i = 1; i <= n; i++)
+      //     newArr = n.split(' ')
+      //     console.log(newArr)
+      // }
+      // CountNum(78)
+
+      // let mystring_num = '12345';
+      // var s = 0;
+      // const count = (n, i) => {
+      //   let arrayStrig1 = n.toString().split(""); // Ép số về string
+      //   for (i = 0; i < arrayStrig1.length; i++) {
+      //     s = s + Number(arrayStrig1[i]); // ép mảng về number
+      //   }
+      //   console.log(s);
+      // };
+      // count(565);
+
+      // Bài 45: Hãy tính tích các chữ số của số nguyên dương n
+      //   var s = 1;
+      //   const count = (n, i) => {
+      //     let arrayStrig1 = n.toString().split(""); // Ép số về string
+      //     for (i = 0; i < arrayStrig1.length; i++) {
+      //       s = s * Number(arrayStrig1[i]); // ép mảng về number
+      //     }
+      //     console.log(s);
+      //   };
+      //   count(1234);
+
+      // Bài 46: Hãy đếm số lượng chữ số lẻ của số nguyên dương n
+      //   var s = 0;
+      //   const count = (n, i) => {
+      //     let arrayStrig1 = n.toString().split(""); // Ép số về string
+      //     for (i = 0; i < arrayStrig1.length; i++) {
+      //         if (Number(arrayStrig1[i]) % 2 != 0)
+      //       s = s + Number(arrayStrig1[i]); // ép mảng về number
+      //     }
+      //     console.log(s);
+      //   };
+      //   count(12345);
+
+      // Bài 47: Hãy tính tổng các chữ số chẵn của số nguyên dương n
+      //   var s = 0;
+      //   const count = (n, i) => {
+      //     let arrayStrig1 = n.toString().split(""); // Ép số về string
+      //     for (i = 0; i < arrayStrig1.length; i++) {
+      //         if (Number(arrayStrig1[i]) % 2 == 0)
+      //       s = s + Number(arrayStrig1[i]); // ép mảng về number
+      //     }
+      //     console.log(s);
+      //   };
+      //   count(12345);
+
+      // Bài 48: Hãy tính tích các chữ số lẻ của số nguyên dương n
+      //   var s = 1;
+      //   const count = (n, i) => {
+      //     let arrayStrig1 = n.toString().split(""); // Ép số về string
+      //     for (i = 0; i < arrayStrig1.length; i++) {
+      //         if (Number(arrayStrig1[i]) % 2 != 0)
+      //       s = s * Number(arrayStrig1[i]); // ép mảng về number
+      //     }
+      //     console.log(s);
+      //   };
+      //   count(123453);
+
+      // Bài 49: Cho số nguyên dương n. Hãy tìm chữ số đầu tiên của n
+
+      //   const count = (n) => {
+      //     let firstItem = 0;
+      //     let arrayStrig1 = n.toString().split(""); // Ép số về string
+      //     for (let i = 0; i < arrayStrig1.length; i++) {
+      //         firstItem = Number(arrayStrig1[0])
+      //     }
+      //     return firstItem
+      // };
+      // console.log(count(3453))
+
+      // Bài 50: Hãy tìm số đảo ngược của số nguyên dương n
+      //   const daoNguoc = (n) => {
+      //     let newArr = 0;
+      //     let arrayStrig1 = n.toString().split(""); // Ép số về string
+      //     newArr = arrayStrig1.reverse().join("");
+      //     return newArr;
+      //   };
+      //   console.log(daoNguoc(5678));
+
+      // Bài 51: Tìm chữ số lớn nhất của số nguyên dương n
+      //   const highestNum = (n) => {
+      //     let numItem = 0;
+      //     let arr = n.toString().split('');
+      //     for (let i = 0; i < arr.length; i++) {
+      //         if (arr[i] > numItem) {
+      //             numItem = arr[i]
+      //         }
+      //     }
+      //     return numItem;
+      //   }
+      //   console.log(highestNum(5649))
+
+      // Bài 52: Tìm chữ số nhỏ nhất của số nguyên dương n
+      //   const highestNum = (n) => {
+      //     numItem = 9;
+      //     arr = n.toString().split('');
+      //     for (let i = 0; i < arr.length; i++) {
+      //         if (arr[i] < numItem) {
+      //             numItem = arr[i]
+      //         }
+      //     }
+      //     return numItem;
+      //   }
+      //   console.log(highestNum(956))
+
+      // Bài 53: Hãy đếm số lượng chữ số lớn nhất của số nguyên dương n
+      const highestNum = (n) => {
+        let maxNumber = 0;
+        let countHighest = 0;
+        arr = n.toString().split("");
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] >= maxNumber) {
+            maxNumber = Number(arr[i]);
+          }
+        }
+        for (let i = 0; i < arr.length; i++) {
+          if (maxNumber == Number(arr[i])) {
+            countHighest++;
+          }
+        }
+
+        return countHighest;
+      };
+      console.log(highestNum(96599));
+    </script>
+  </body>
+</html>
