@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Bài 67: Tính S(x, n) = x – x^2 + x^3 + … + (-1)^n+1 * x^n
+      //   let S = 0;
+      //   let T = 0;
+      //   const Sum = (x, n) => {
+      //     for (i = 1; i <= n; i++) {
+      //       T = T + 1;
+      //       console.log("🚀 ~ file: 67-76.html ~ line 20 ~ Sum ~ T", T);
+      //       S = S + Math.pow(x, T) * Math.pow(-1, T + 1);
+      //       console.log("🚀 ~ file: 67-76.html ~ line 22 ~ Sum ~ S", S);
+      //     }
+      //     return S;
+      //   };
+      //   console.log(Sum(2, 3));
+
+      // Bài 68: Tính S(x, n) = -x^2 + x^4 + … + (-1)^n * x^2n
+      //   let S = 0;
+      //   let T = 0;
+      //   const Sum = (x, n) => {
+      //     for (i = 1; i <= n; i++) {
+      //       T = T + 2;
+      //       console.log("🚀 ~ file: 67-76.html ~ line 20 ~ Sum ~ T", T);
+      //       S = S + Math.pow(x, T) * Math.pow(-1, i);
+      //       console.log("🚀 ~ file: 67-76.html ~ line 22 ~ Sum ~ S", S);
+      //     }
+      //     return S;
+      //   };
+      //   console.log(Sum(2, 3));
+
+      // Bài 69: Tính S(x, n) = x – x^3 + x^5 + … + (-1)^n * x^2n+1
+      //   let S = 0;
+      //   let T = -1;
+      //   const Sum = (x, n) => {
+      //     for (i = 1; i <= n; i++) {
+      //       T = T + 2;
+      //       console.log("🚀 ~ file: 67-76.html ~ line 20 ~ Sum ~ T", T);
+      //       S = S + Math.pow(x, T) * Math.pow(-1, i+1);
+      //       console.log("🚀 ~ file: 67-76.html ~ line 22 ~ Sum ~ S", S);
+      //     }
+      //     return S;
+      //   };
+      //   console.log(Sum(2, 3)); //26
+
+      // Bài 70: Tính S(n) = 1 – 1/(1 + 2) + 1/(1 + 2 + 3) + … + (-1)^n+1 * 1/(1 + 2 + 3+ … + n)
+      //   let S = 0;
+      //   let T = 0;
+      //   let P = 0;
+      //   const Sum = (n) => {
+      //     for (i = 1; i <= n; i++) {
+      //       T = T + 1;
+      //       P = P + T;
+      //       S = S + (1 / P) * Math.pow(-1, i + 1);
+      //       console.log("🚀 ~ file: 67-76.html ~ line 60 ~ Sum ~ P", P);
+      //       console.log("🚀 ~ file: 67-76.html ~ line 22 ~ Sum ~ S", S); // Hơi khó nhưng éo làm khó đc anh
+      //     }
+      //     return S;
+      //   };
+      //   console.log(Sum(5)); //26
+
+      // Bài 71: Tính S(x, n) = -x + x^2/(1 + 2) – x^3/(1 + 2 + 3) + … + (-1)^n * x^n/(1 + 2 +… + n)
+      //   let S = 0;
+      //   let T = 0;
+      //   let P = 0;
+      //   const Sum = (x, n) => {
+      //     for (i = 1; i <= n; i++) {
+      //       T = T + 1;
+      //       P = P + T;
+      //       S = S + (Math.pow(x, T) / P) * Math.pow(-1, i);
+      //       console.log("🚀 ~ file: 67-76.html ~ line 76 ~ Sum ~ T", T)
+      //       console.log("🚀 ~ file: 67-76.html ~ line 60 ~ Sum ~ P", P);
+      //       console.log("🚀 ~ file: 67-76.html ~ line 22 ~ Sum ~ S", S);
+      //     }
+      //     return S;
+      //   };
+      //   console.log(Sum(2, 5)); //-2.53
+
+      // Bài 72: Tính S(x, n) = – x + x^2/2! – x^3/3! + … + (-1)^n * x^n/n!
+      //Cái dấu chấm than này là GIAI THỪA nhé!!! Vd:
+      // 1! = 1
+      // 2! = 2 x 1 = 2
+      // 3! = 3 x 2 x 1 = 6
+      // 4! = 4 x 3 x 2 x 1 = 24
+      //   let S = 0;
+      //   let T = 0;
+      //   let P = 1;
+      //   const Sum = (x, n) => {
+      //     for (i = 1; i <= n; i++) {
+      //       T = T + 1;
+      //       P = P * T;
+      //       S = S + (Math.pow(x, T) / P) * Math.pow(-1, i);
+      //       console.log("🚀 ~ file: 67-76.html ~ line 76 ~ Sum ~ T", T);
+      //       console.log("🚀 ~ file: 67-76.html ~ line 60 ~ Sum ~ P", P);
+      //       console.log("🚀 ~ file: 67-76.html ~ line 22 ~ Sum ~ S", S);
+      //     }
+      //     return S;
+      //   };
+      //   console.log(Sum(2, 5));
+
+      // Bài 73: Tính S(x, n) = -1 + x^2/2! – x^4/4! + … + (-1)^n+1 * x^2n/(2n)!
+      let S = 0;
+      let T = -2;
+      let P = 1;
+      const Sum = (x, n) => {
+        for (i = 1; i <= n; i++) {
+          T = T + 2;
+          P = P * (i + 1);
+          S = S + (Math.pow(x, T) / P) * Math.pow(-1, i);
+          console.log("🚀 ~ file: 67-76.html ~ line 116 ~ Sum ~ P", P)
+          console.log("🚀 ~ file: 67-76.html ~ line 76 ~ Sum ~ T", T);
+          console.log("🚀 ~ file: 67-76.html ~ line 22 ~ Sum ~ S", S);
+        }
+        return S;
+      };
+      console.log(Sum(2, 5));
+
+
+    //   var s = 1;
+    //   const factorial = (x) => {
+    //     for (i = 1; i <= x; i++) {
+    //       s = s * (i + 1);
+    //       console.log("🚀 ~ file: 67-76.html ~ line 126 ~ factorial ~ s", s)
+    //     }
+    //     return s
+    //   };
+    //   console.log(factorial(5));
+
+      // Bài 74: Tính S(x, n) = 1 – x + x^3/3! – x^5/5! + … + (-1)^n+1 * x^2n+1/(2n + 1)!
+
+      // Bài 75: Kiểm tra số nguyên 4 byte có dạng 2^k hay không
+
+      // Bài 76: Kiểm tra số nguyên 4 byte có dạng 3^k hay không
+    </script>
+  </body>
+</html>
