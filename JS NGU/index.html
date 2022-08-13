@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="get" action="">
+      Nhập số: <input type="text" id="number" value="" />
+      <input type="button" value="In kết quả" onclick="print_number()" />
+    </form>
+    <div id="result"></div>
+    <script>
+      // function print_number() {
+      //   number = document.getElementById("number").value;
+      //   console.log("number", number);
+
+      //   var html = "";
+      //   for (i = 0; i <= number; i++) {
+      //     html = html + i + "<br>";
+
+      //   }
+      //   document.getElementById("result").innerHTML = html;
+      // }
+      // print_number();
+      // setInterval(() => {
+      //   console.log("Hello anh em");
+      // }, 1000);
+
+      //   function print_number() {
+      //     // Lấy number
+      //     var number = document.getElementById("number").value;
+      //     console.log("number", number)
+
+      //     // Ép number sang kiểu INT
+      //     number = parseInt(number);
+
+      //     // Lặp để in kết quả
+      //     var html = "";
+      //     for (var i = 1; i <= number; i++) {
+      //       html += i + " <br/>";
+      //     }
+      //     document.getElementById("result").innerHTML = html;
+      //   }
+
+      // var myObject = {
+      //   name: "Linh Fam",
+      //   age: 25,
+      //   nyFunction: function () {},
+      // };
+
+      // var myArray = ['Javascript', 'PHP', 'Ruby']
+
+      // var myString = 'Hoc JS tai F8!'
+
+      //1. Length
+      // console.log(myString.length)
+
+      //2. Find index
+      // console.log(myString.indexOf('JS'))
+      //Tìm vị trí của cái mình cần tìm ở trong chuỗi
+      //Trường hợp ko có thì sẽ trả về là -1
+
+      // console.log(myString.indexOf('JS', 7))
+      //Đối số thứ 2 là kiếm từ vị trí từ đó đi
+
+      // var myString = 'Hoc JS JS JS tai F8!'
+      // console.log(myString.lastIndexOf('JS'))
+      //Sẽ trả về vị trí cuối cùng của JS
+
+      // Cut string
+      // console.log(myString.slice(a, b))
+      // a - là vị trí từ a
+      // b - đến vị trí b
+      // ko nhập b thì cắt đến cuối chuỗi
+
+      //Replace
+      // console.log(myString.replace('a', 'b'))
+      // a - từ cần thay thế
+      // b - từ sẽ thay thế
+
+      // console.log(myString.replace(/a/g, 'b'))
+      // a - tất cả từ cần thay thế
+
+      //Convert to upper case
+      // console.log(myString.toUpperCase())
+
+      //Convert to lower case
+      // console.log(myString.toLowerCase())
+
+      //Trim - Bỏ đi khoảng trắng đầu và cuối của 1 chuổi khi bị nhập thừa
+      // console.log(myString.trim())
+
+      //Split - quy đổi từ string => array
+      // var languages = 'Javascript, PHP, Ruby';
+      // console.log(languages.split(', '))
+      //Chuyền vào điểm chung mà mình muốn cắt
+
+      //Get a character by index
+      // Cách 1
+      // console.log(myString.charAt(a))
+      // a - vị trí mà mình muốn lấy chữ cái đó ra
+
+      //Cách 2
+      // console.log(myString[a])
+      // a - vị trí mà mình muốn lấy chữ cái đó ra
+
+      //Làm việc với array
+
+      /*
+
+      var languages = ['Javascript', 'PHP', 'Ruby']
+
+        1. To String
+        console.log(languages.toString())
+
+        2. Join
+        console.log(languages.join(a))
+        //a - ký tự ngăn cách giữa cách phần tử // '' || ,
+        //split - Biến 1 chuỗi thành array
+        //join - Biến 1 arr thành 1 chuỗi
+
+        3. Pop - cuối | shift - đầu
+        console.log(languages.pop())
+        //Xoá phần tử cuối mảng và trả về chính nó // Ruby
+        //Mảng mới sẽ là languages = ['Javascript', 'PHP']
+
+        4. Push - cuối | unshift - đầu
+        console.log(languages.push('Dark'))
+        //Thêm phần tử vào cuối mảng và trả về độ dài của mảng mới //4
+        //Mảng mới sẽ là languages = ['Javascript', 'PHP', 'Ruby', 'Dark']
+
+        7. Splicing - Xoá hoăc chèn thêm
+        languages.splice(a, b)
+        a - vị trí bắt đầu xoá. Vd: 1
+        b - số phần tử muốn xoá. Vd: 1, 
+        console.log(languages)
+        //['Javascript', 'Ruby']
+
+        languages.splice(a, 0, c)
+        a - vị trí bắt đầu xoá (Đặt con trỏ). Vd: 1
+        b - 0, KO xoá mà để chèn thêm
+        c - Là phần tử muốn chèn thêm // 'Dark'
+        console.log(languages)
+        //['Javascript', 'Dark', 'PHP', 'Ruby']
+
+        8. Concat - Nối array
+        languages2 = ['Dark', 'C++']
+        console.log(languages.concat(languages2))
+        //Tham số chuyền vào là mảng thứ 2 cần nối
+        //['Javascript', 'PHP', 'Ruby', 'Dark', 'C++']
+
+
+        9. Slicing - Xoá phần từ của mảng
+        //Giống splice nhưng trả về chính phần tử đã cắt
+        console.log(languages.slice(1, 2))
+        a - vị trị đặt trỏ chuột
+        b - đến vị trí cần cắt
+        //['PHP']
+        
+        */
+
+      // function writeLog() {
+      //   var arr = [];
+      //   for (var param of arguments) {
+      //     arr.push(param)
+      //   }
+      //   return arr.join('-')
+      // }
+      // console.log(writeLog('Javascript', 'PHP', 'Ruby'))
+
+      //Declaration function
+      // showMessage()
+      // function showMessage() {}
+      //Có thể gọi trước khi đinh nghĩa nhờ có hosting
+
+      //Expression function
+      // var showMessage2 = function() {}
+      //Vd: setTimeout(function autoLogin() {...});
+      //Vd: myObject = {myFunction: function() {}}
+      //Có thể đặt tên hay ko. Mục đích chỉ để hiểu function đó làm gì
+      //Chỉ gọi được sau khi định nghĩa
+
+      //Arrow function
+      // showMessage3 = () => {}
+
+      // var myInfo = {
+      // 'full-name': 'Linh',
+      //Khi muốn làm sai quy tắc đặt tên biến thì thêm dấu nháy
+      // age: 25,
+      // address: 'Binh Duong',
+      // getName: function() {
+      // return this.age
+      // }
+      // }
+
+      //Thay đổi tên key trong object
+      // var myKey = 'address';
+      //Khi lấy ra phải viết
+      // console.log(myInfo[myKey])
+
+      //Thêm 1 key mới vào object
+      // myInfo.email = 'famxuanlinh@mail.ru'
+      //Muốn đặt tên sai quy tắc thì thêm dấu ngoặc vuông
+      // myInfo['my-email'] = 'famxuanlinh@mail.ru'
+
+      //Xoá 1 đối tượng
+      // delete myInfo.age;
+
+      //Trong 1 object
+      //Function -> Phương thức / method
+      //Other -> Thuộc tính / property
+
+      // Có 2 cách để lấy ra key trong 1 object
+      // console.log(myInfo.getName())
+      // console.log(myInfo['age'])
+
+      // var User = function (firstName, lastName, avatar) {
+      //   this.firstName = firstName;
+      //   this.lastName = lastName;
+      //   this.avatar = avatar;
+      //   this.getName = function() {
+      //     return `${this.firstName} ${this.lastName}`
+      //   }
+      // };
+
+      // User.prototype.className = 'F8'
+      // //Muốn thêm 1 thuộc tính vào hàm tạo thì phải qua prototype
+
+      // var author = new User('Linh', 'Fam', 'Avatar')
+      // var user = new User('Manh', 'Fam', 'Avatar')
+
+      // console.log(author.className)
+      // console.log(user.firstName)
+
+      // var date = new Date();
+      // //Phải có new trả về đối tượng, ko có new trả về string thì sẽ ko truy xuất đc
+
+      // var year = date.getFullYear();
+      // var month = date.getMonth() + 1;
+      // var day = date.getDay();
+
+      // console.log(`${day} / ${month}/ ${year}`)
+
+      // var date = 5;
+      // switch (date) {
+      //   case 2:
+      //     console.log("Hnay là thứ 2");
+      //     break;
+      //     //Nếu ko có break thì sẽ lọt vào cái sau
+      //   case 3:
+      //     console.log("Hnay là thứ 3");
+      //     break;
+      //   case 4:
+      //     console.log("Hnay là thứ 4");
+      //     break;
+      //   case 5:
+      //     console.log("Hnay là thứ 5");
+      //     break;
+      //   default:
+      //     console.log('Ko biết')
+      // }
+      //Sử dụng khi sl case trên 3 (đẹp mắt)
+      //Đã biết trước giá trị. Nó sử dụng toán tử === để ss
+
+      //if else: < > == !=
+
+      //Nếu có 2 object thì mình gộp điểm chung của 2 object đó
+      //Để làm việc nhanh hơn thay vì viết 2 object riêng lẻ
+
+      // var a = 6;
+      // var b = 3;
+      // var c = a > 0 ? a : b;
+      // //Sử dụng trong những trường hợp đơn giản
+      // console.log(c)
+
+      // for (var i = 1; i < 10; i++) {
+      //   console.log(i)
+      // }
+
+      // var myInfo = {
+      //   name: 'Linh Fam',
+      //   age: 20,
+      //   address: 'BD VN',
+      // }
+      // for (var key in myInfo) {
+      //   console.log(myInfo[key])
+      // }
+
+      // var languages = ['Js', 'Ruby', 'PHP']
+      // for (var keys in languages) {
+      //   console.log(languages[keys])
+      // }
+
+      // var myString = "Javascript";
+      // for (var key in myString) {
+      //   console.log(myString[key])
+      // }
+
+      // var myInfo = {
+      //   name: 'Linh Fam',
+      //   age: 20,
+      //   address: 'BD VN',
+      // }
+      // for (var value of Object.values(myInfo)) {
+      //   console.log(value)
+      // }
+
+      // for (var key of Object.keys(myInfo)) {
+      //   console.log(key)
+      // }
+
+      // var languages = ["Js", "Ruby", "PHP"];
+      // var i = 0;
+      // while ((i < languages.length)) {
+      //   console.log(languages[i]);
+      //   i++;
+      // }
+
+      // var i = 0;
+      // var isSuccess = false;
+      // // Chạy trước 1 lần rồi mới check điều kiện
+      // do {
+      //   i++;
+      //   console.log('Nap thẻ lần ' + i)
+
+      //   //Thất bại
+      //   if (false) {
+      //     isSuccess = true;
+      //   }
+      // } while (!isSuccess && i < 4)
+
+      // break - Đúng đk thì đến đó sẽ dừng lại
+      // continue - Đúng đk thì bỏ qua và lặp lại từ đầu
+
+      // var orders = [
+      //   {
+      //     name: "Khóa học HTML - CSS Pro",
+      //     price: 3000000,
+      //   },
+      //   {
+      //     name: "Khóa học Javascript Pro",
+      //     price: 2500000,
+      //   },
+      //   {
+      //     name: "Khóa học React Pro",
+      //     price: 3200000,
+      //   },
+      // ];
+      // // console.log(orders[0].price)
+      // var s = 0;
+      // const getTotal = (orders) => {
+      //   for (var i = 0; i < orders.length; i++) {
+      //     s = s + orders[i].price;
+      //   }
+      //   console.log("🚀 ~ file: index.html ~ line 360 ~ getTotal ~ s", s)
+      // };
+
+      // // Expected results:
+      // getTotal(orders); // Output: 8700000
+
+      // var myArr = [
+      //   [1, 2],
+      //   [3, 4],
+      //   [5, 6],
+      // ];
+      // var newArr = [];
+      // const getMyArr = (myArr) => {
+      //   for (var i = 0; i < myArr.length; i++) {
+      //     // console.log(myArr[i]);
+      //     for (var j = 0; j < myArr[i].length; j++) {
+      //       console.log(myArr[i][j]);
+      //       newArr.push(myArr[i][j]);
+      //     }
+      //   }
+      //   return newArr;
+      // };
+
+      // console.log(getMyArr(myArr));
+
+      // for (var i = 100; i > 0; i--) {
+      //   console.log(i)
+      // }
+
+      //In 0 5 10 15
+      // var s = 0;
+      // for (var i = 100; i >= 0; i -= 5) {
+      
+      //   console.log(i);
+      // }
+    </script>
+  </body>
+</html>
