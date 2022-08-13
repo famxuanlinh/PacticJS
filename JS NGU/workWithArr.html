@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Array methods
+        forEach()
+        every()
+        some()
+        find()
+        filter()
+        map()
+        reduce()
+        */
+
+        // var topics = [
+        //     {
+        //         topic: 'Front-end',
+        //         courses: [
+        //             {
+        //                 id: 1,
+        //                 title: 'HTML, CSS'
+        //             },
+        //             {
+        //                 id: 2,
+        //                 title: 'Javascript'
+        //             }
+        //         ]
+        //     },
+        //     {
+        //         topic: 'Back-end',
+        //         courses: [
+        //             {
+        //                 id: 1,
+        //                 title: 'UUU, CSS'
+        //             },
+        //             {
+        //                 id: 2,
+        //                 title: 'OOOO'
+        //             }
+        //         ]
+        //     }
+        // ]
+
+        // var newCourses = topics.reduce((courses, topic) => courses.concat(topic.courses), [])
+        // console.log(newCourses)
+
+    //   var courses = [
+    //     {
+    //       id: 1,
+    //       name: "HTML, CSS",
+    //       coin: 0,
+    //     },
+    //     {
+    //       id: 2,
+    //       name: "Ruby",
+    //       coin: 0,
+    //     },
+    //     {
+    //       id: 3,
+    //       name: "JS",
+    //       coin: 400,
+    //     },
+    //     {
+    //       id: 4,
+    //       name: "UH",
+    //       coin: 120,
+    //     },
+    //     {
+    //       id: 5,
+    //       name: "AI",
+    //       coin: 500,
+    //     },
+    //     {
+    //       id: 6,
+    //       name: "UH",
+    //       coin: 120,
+    //     },
+    //   ];
+
+
+
+
+      //Flat - 'Làm phẳng' mảng từ Depth array - 'Mảng sâu'
+    //   var deptArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
+
+    //   var flatArray = deptArray.reduce(
+    //     (flatItems, deptItem) => flatItems.concat(deptItem),
+    //     []
+    //     );
+    //   var totalNumbers = flatArray.reduce((total, currentValue) => total + currentValue)
+    //   console.log(flatArray)
+    //   console.log(totalNumbers)
+
+      //   var numbers = [100, 200, 300];
+      //   var totalCoin = numbers.reduce((total, number) => total + number);
+      //Ko cần initial value vì nó sẽ tự lấy chính phần từ đầu tiên để làm initial value
+      //   console.log(totalCoin);
+
+      //   var totalCoin = courses.reduce((a, b) => a + b.coin, 0)
+      //   console.log(totalCoin)
+      //0 - initial init Giá trị khởi tạo
+      //a - accumulator biến lưu trữ tạm thời
+      //b - current value
+
+      //Giaỉ bài toán đó với vòng lặp for
+      // var a = 0;
+      // const totalCoin = function(courses) {
+      //     for(var course of courses) {
+      //         a += course.coin;
+      //     }
+      //     return a
+      // }
+      // console.log(totalCoin(courses))
+
+      //   var sum = 0;
+      //   for (var course of courses) {
+      //     sum += course.coin;
+      //   }
+      //   console.log(sum)
+
+      //   var newCourses = courses.map(function(course) {
+      //     return {
+      //         id: course.id,
+      //         name: `Khoa hoc: ${course.name}`,
+      //         coin: course.coin,
+      //         coinText: `Gia: ${course.coin}`,
+      //     }
+
+      //   })
+      //   console.log(newCourses)
+
+      //Duyệt qua các phần tử của mảng
+      //   courses.forEach(function(course, index) {
+      //     console.log(index, course.name)
+      //   })
+
+      //Duyệt qua từng phần tử của mảng để ktra điều kiện
+      //   isFree = courses.every(function (course) {
+      //     return course.coin === 0;
+      //   });
+      //   console.log(isFree);
+      //Trả về boolean
+      //Tất cả phải đúng mới trả về là true. Còn ko trả về là false
+
+      //Duyệt qua từng phần tử của mảng để ktra điều kiện
+      //   isFree = courses.every(function (course) {
+      //     return course.coin === 0;
+      //   });
+      //   console.log(isFree);
+      //Trả về boolean
+      //Chỉ cần 1c đúng thì trả về là true
+
+      //Lọc phần tử trong mảng
+      //   listCourse = courses.map(function (course) {
+      //     return course.name
+      //   });
+      //   console.log(listCourse);
+      //Nếu có trả về tất cả các phần tử đúng. Còn ko thì trả về undefined
+    </script>
+  </body>
+</html>
