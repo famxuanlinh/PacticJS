@@ -106,32 +106,35 @@
       //   console.log(Sum(2, 5));
 
       // Bài 73: Tính S(x, n) = -1 + x^2/2! – x^4/4! + … + (-1)^n+1 * x^2n/(2n)!
-      let S = 0;
-      let T = -2;
-      let P = 1;
-      const Sum = (x, n) => {
-        for (i = 1; i <= n; i++) {
-          T = T + 2;
-          P = P * (i + 1);
-          S = S + (Math.pow(x, T) / P) * Math.pow(-1, i);
-          console.log("🚀 ~ file: 67-76.html ~ line 116 ~ Sum ~ P", P)
-          console.log("🚀 ~ file: 67-76.html ~ line 76 ~ Sum ~ T", T);
-          console.log("🚀 ~ file: 67-76.html ~ line 22 ~ Sum ~ S", S);
-        }
-        return S;
-      };
-      console.log(Sum(2, 5));
-
+    //   let S = 0;
+    //   let T = -2;
+    //   let P = 1;
+    //   const Sum = (x, n) => {
+    //     for (i = 1; i <= n; i++) {
+    //       T = T + 2;
+    //       P = P * (i + 1);
+    //       S = S + (Math.pow(x, T) / P) * Math.pow(-1, i);
+    //       console.log("🚀 ~ file: 67-76.html ~ line 76 ~ Sum ~ T", T);
+    //       console.log("🚀 ~ file: 67-76.html ~ line 116 ~ Sum ~ P", P)
+    //       console.log("🚀 ~ file: 67-76.html ~ line 22 ~ Sum ~ S", S);
+    //     }
+    //     return S;
+    //   };
+    //   console.log(Sum(2, 5));
+        // BÀI ANỲ CHỊU
 
     //   var s = 1;
+    //   var p = 1;
     //   const factorial = (x) => {
     //     for (i = 1; i <= x; i++) {
     //       s = s * (i + 1);
+    //       p = p * i * s
     //       console.log("🚀 ~ file: 67-76.html ~ line 126 ~ factorial ~ s", s)
+    //       console.log("🚀 ~ file: 67-76.html ~ line 130 ~ factorial ~ p", p)
     //     }
     //     return s
     //   };
-    //   console.log(factorial(5));
+    //   console.log(factorial(6));
 
       // Bài 74: Tính S(x, n) = 1 – x + x^3/3! – x^5/5! + … + (-1)^n+1 * x^2n+1/(2n + 1)!
 

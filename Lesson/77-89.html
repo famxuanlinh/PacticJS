@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <script>
+      // Bài 77: Viết chương trình tính tổng của dãy số sau: S(n) = 1 + 2 + 3 + … + n
+      // var s = 0;
+      // const sum = (n) => {
+      //     for (i = 1; i <= n; i++) {
+      //         s = s + i
+      //     }
+      //     return s
+      // }
+      // console.log(sum(10))
+
+      // Bài 78: Liệt kê tất cả các ước số của số nguyên dương n
+      //   var arr = [3, -2, 4, -5, 8, 10, -22];
+      //   var arrPlus = [];
+      //   const numberPlus = () => {
+      //     for (i = 0; i <= arr.length; i++) {
+      //       if (arr[i] > 0) {
+      //         arrPlus.push(arr[i]);
+      //       }
+      //     }
+      //     return arrPlus;
+      //   };
+      //   console.log(numberPlus());
+
+      // Bài 79: Hãy đếm số lượng chữ số của số nguyên dương n
+      //   var arr = [3, -2, 4, -5, 8, 10, -22];
+      //   var arrPlus = [];
+      //   const numberPlus = () => {
+      //     for (i = 0; i <= arr.length; i++) {
+      //       if (arr[i] > 0) {
+      //         arrPlus.push(arr[i]);
+      //       }
+      //     }
+      //     return arrPlus.length;
+      //   };
+      //   console.log(numberPlus());
+
+      // Bài 80: Giống bài 16
+
+      // Bài 81: Viết chương trình cho tất cả các bài tập chương trước bằng kỹ thuật lập trình hàm(đéo làm)
+
+      // Chương 3:
+
+      // Bài 82: Viết chương trình tìm số lớn nhất trong 3 số thực a, b, c
+      //   const biggestNumber = (a, b, c) => {
+      //     if (a > b && a > c) {
+      //         console.log(a)
+      //     } else if (b > a && b > c) {
+      //         console.log(b)
+      //     } else {
+      //         console.log(c)
+      //     }
+      //   }
+      //   biggestNumber(3, 6, -9)
+
+      // Bài 83: Viết chương trình nhập 2 số thực, kiểm tra xem chúng có cùng dấu hay không
+      //   const sameNumber = (a, b) => {
+      //     if (a >= 0 && b >= 0) {
+      //       console.log(` Số ${a} và ${b} cùng dấu`)
+      //     } else {
+      //         console.log(` Số ${a} và ${b} ko cùng dấu`);
+      //     }
+      //   };
+      //   sameNumber(-3, 0);
+
+      // Bài 84: Viết chương trình giải và biện luận phương trình bậc nhất ax + b = 0
+
+      //   const findX = (a, b) => {
+      //     if (a != 0) {
+      //         x = (-b) / a
+      //         console.log(x)
+      //     } else {
+      //         console.log('Phương Trình ko đúng')
+      //     }
+      //   }
+      //   findX(2, 1)
+
+      // Bài 85: Nhập vào tháng của 1 năm. Cho biết tháng thuộc quý mấy trong năm
+      //   const sessonOfYear = (x) => {
+      //     if (x < 4) {
+      //         console.log('Seson I')
+      //     } else if (x < 7 ) {
+      //         console.log('Seson II')
+      //     } else if (x < 10 ) {
+      //         console.log('Seson III')
+      //     } else if (x < 13 ) {
+      //         console.log('Seson IV')
+      //     } else {
+      //         console.log('Đừng xạo l')
+      //     }
+      //   }
+      //   sessonOfYear(4)
+
+      // Bài 86: Tính S(n) = 1^3 + 2^3 + … + N^3
+      //   var s = 0;
+      //   const sum = (n) => {
+      //     for (i = 1; i <= n; i++) {
+      //       s = s + Math.pow(i, 3);
+      //     }
+      //     return s;
+      //   };
+      //   console.log(sum(3));
+
+      // Bài 87: Tìm số nguyên dương n nhỏ nhất sao cho 1 + 2 + … + n > 10000
+      //   var i = 0;
+      //   var s = 0;
+      //   const sum = (x) => {
+      //     while (s < x) {
+      //         i++;
+      //         s = s + i;
+      //       console.log("🚀 ~ file: 77-89.html ~ line 120 ~ sum ~ i", i)
+      //       console.log("🚀 ~ file: 77-89.html ~ line 120 ~ sum ~ s", s)
+      //     }
+      //     console.log("s =", s)
+      //     console.log("i =", i)
+      //   };
+      //   sum(4) // i = 3
+
+      // Bài 88: Hãy sử dụng vòng lặp for để xuất tất cả các ký tự từ A đến Z
+        var arr = []
+        const alphabet = () => {
+          for (i = 'A'; i <= 'Z'; i++) {
+              console.log("🚀 ~ file: 77-89.html ~ line 132 ~ alphabet ~ i", i)
+              arr.push(i)
+              console.log("🚀 ~ file: 77-89.html ~ line 135 ~ alphabet ~ arr", arr)
+          }
+          return arr
+        }
+        console.log(alphabet())
+
+    //   var number = 1;
+
+    //   for (i = 0; i < 2; i++) {
+    //     for (j = 1; j < 10; j++) {
+    //       document.write("<div class='square'></div>");
+    //     }
+    //     document.write("<div style='clear:left'></div>");
+    //   }
+    </script>
+  </body>
+</html>
