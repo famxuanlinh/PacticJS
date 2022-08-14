@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function sumCb(a, b) {
+      //   return a + b;
+      // }
+      // function subCb(a, b) {
+      //   return a - b;
+      // }
+      // function multiCb(a, b) {
+      //   return a * b;
+      // }
+      // function divCb(a, b) {
+      //   return a / b;
+      // }
+
+      // function caculate(a, b, cb) {
+      //   return cb(a, b);
+      // }
+
+      // console.log(caculate(1, 2, sumCb));
+      // console.log(caculate(1, 2, subCb));
+      // console.log(caculate(1, 2, multiCb));
+      // console.log(caculate(1, 3, divCb));
+
+      //Call back - Là hàm được chuyền qua đối số khi gọi hàm khác
+      //   function myFunction(param) {
+      //     param("Hello ae!");
+      //   }
+      //   function myCallback(value) {
+      //     console.log(value);
+      //   }
+      //   myFunction(myCallback);
+
+      //   var courses = ["Javascript", "PHP", "Ruby"];
+      // var htmls = courses.map((course) => {
+      //   return `<h2>${course}</h2>`;
+      // });
+      // console.log(htmls.join("")); //<h2>Javascript</h2><h2>PHP</h2><h2>Ruby</h2>
+
+      //   Cách map làm việc
+      //   Tự định nghĩa map2 và gắn cho nó 1 cái function
+      // Array.prototype.myMap = function (callback) {
+      //   var output = [];
+      //   for (var i = 0; i < this.length; i++) {
+      //     var result = callback(this[i], i);
+      //     output.push(result);
+      //   }
+      //   return output;
+      // };
+      // var htmls2 = courses.myMap((course) => {
+      //   return `<h2>${course}</h2>`;
+      // });
+      // console.log(htmls2.join(""));
+
+      //   var numbers = [1, 2, 3];
+      //   var thuaSo = numbers.map((number) => {
+      //     return number * 2;
+      //   });
+      //   var thuaSo2 = numbers.map((number, index) => {
+      //     return number * index;
+      //   });
+      //   console.log(thuaSo);
+      //   console.log(thuaSo2);
+
+      //   Array.prototype.myMap = function(callback) {
+      //     var output = []
+      //     for (var i = 0; i < this.length; i++) {
+      //         var result = callback(this[i], i);
+      //         output.push(result);
+      //     }
+      //     return output
+      //   };
+      //   var thuaSo3 = numbers.myMap((number, index) => {
+      //     return number * 2;
+      //   });
+      //   var thuaSo4 = numbers.myMap((number, index) => {
+      //     return number * index;
+      //   });
+      //   console.log(thuaSo3)
+      //   console.log(thuaSo4)
+
+      //   Array.prototype.myMap = function (callback) {
+      //     var output = [];
+      //     for (var i = 0; i < this.length; i++) {
+      //       var result = callback(this[i], i);
+      //       output.push(result);
+      //     }
+      //     return output;
+      //   };
+      //   var htmls2 = courses.myMap((course) => {
+      //     return `<h2>${course}</h2>`;
+      //   });
+      //   console.log(htmls2.join(""));
+
+      //   var courses = ["Javascript", "PHP", "Ruby", "PHP"];
+      //   forEach, reduce, find, filter
+      //Cách làm việc của filter
+      //   var baiHoc = courses.filter((course) => {
+      //       return course === 'PHP'
+      //   })
+      //   console.log(baiHoc)
+
+      //   Array.prototype.filter2 = function (callback) {
+      //     var output = [];
+      //     for (var i = 0; i < this.length; i++) {
+      //       if (this[i] === "PHP") {
+      //         output.push(callback(this[i]));
+      //       }
+      //     }
+      //     return output;
+      //   };
+      //   var baiHoc1 = courses.filter2((course) => {
+      //     return course;
+      //   });
+      //   console.log(baiHoc1);
+
+      //Cách làm việc của find
+      //   var baiHoc = courses.find((course) => {
+      //       return course === 'PHP'
+      //   })
+      //   console.log(baiHoc)
+
+      //   Array.prototype.find2 = function (callback) {
+      //     var output = [];
+      //     for (var i = 0; i < this.length; i++) {
+      //       if (this[i] === "PHP") {
+      //         output.push(callback(this[i]));
+      //         break;
+      //       }
+      //     }
+      //     return output;
+      //   };
+      //   var baiHoc1 = courses.find2((course) => {
+      //     return course;
+      //   });
+      //   console.log(baiHoc1.toString());
+
+      //   var courses = ["Javascript", "PHP", "Ruby", "PHP"];
+      //   courses.length = 10;
+      //   courses.forEach((course, index, arr) => {
+      //     console.log(index, course, arr);
+      //   });
+
+      //   //Cách làm việc của forEach
+      //   Array.prototype.forEach2 = function (callback) {
+      //     for (var i in this) {
+      //       //Ktra xem key có nằm ở mục gần nhất hay ko. Bỏ qua forEarch
+      //       if (this.hasOwnProperty(i)) {
+      //         callback(this[i], i, this);
+      //       }
+      //     }
+      //   };
+      //   var khoaHoc = courses.forEach2((course, index, arr) => {
+      //     console.log(index, course, arr);
+      //   });
+
+      //   var numbers = [100, 200, 300];
+      //   var sum = numbers.reduce((total, curVal) => total + curVal);
+      //   console.log(sum);
+
+      //   //Cách sử dung reduce
+      //   Array.prototype.reduce1 = function (callback) {
+      //     var result = 0;
+      //     for (var i = 0; i < this.length; i++) {
+      //       result = callback(this[i]);
+      //     }
+      //     return result
+      //   };
+
+      //   var s = 0;
+      //   var sum2 = numbers.reduce1((number) => {
+      //     s = s + number;
+      //     return s
+      //   });
+      //   console.log(sum2);
+
+      var orders = [
+        {
+          name: "Khóa học HTML - CSS Pro",
+          price: 3000000,
+        },
+        {
+          name: "Khóa học Javascript Pro",
+          price: 2500000,
+        },
+        {
+          name: "Khóa học React Pro",
+          price: 3200000,
+        },
+      ];
+
+      //   Cách làm việc của filter
+      var baiHoc = orders.filter((course) => {
+        return course.price > "2600000";
+      });
+      console.log(baiHoc);
+
+      Array.prototype.filter2 = function (callback) {
+        var output = [];
+        for (var i in this) {
+          if (this.hasOwnProperty(i)) {
+            var result = callback(this[i]);
+            if (result) {
+              output.push(result);
+            }
+          }
+        }
+        return output;
+      };
+      var baiHoc1 = orders.filter2((course) => {
+        if (course.price > "2600000") {
+          return course;
+        }
+      });
+      console.log(baiHoc1);
+    </script>
+  </body>
+</html>
