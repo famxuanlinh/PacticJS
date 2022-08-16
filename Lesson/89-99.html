@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Bài 89: Viết chương trình tính tổng các giá trị lẻ nguyên dương nhỏ hơn N
+      //   var s = 0;
+      //   var numbers = [];
+      //   const sum = (n) => {
+      //     for (var i = 1; i < n; i += 2) {
+      //       s = s + i;
+      //       numbers.push(i);
+      //     }
+      //     console.log(numbers); //[1, 3, 5, 7, 9]
+      //     return s;
+      //   };
+      //   console.log(sum(10)); //25
+
+      // Bài 90: Viết chương trình tìm số nguyên dương m lớn nhất sao cho 1 + 2 + … + m < N
+      //   var s = 0;
+      //   var numbers = [];
+      //   const findNumber = (N) => {
+      //     for (var i = 1; i < N / 2; i++) {
+      //       s = s + i;
+      //       if (s < N) {
+      //         continue;
+      //       } else {
+      //         return i - 1;
+      //       }
+      //     }
+      //     console.log(numbers)
+      //   };
+      //   console.log(findNumber(10));
+
+      // Bài 91: In tất cả các số nguyên dương lẻ nhỏ hơn 100
+      //   var numbers = [];
+      //   const arrNumbers = () => {
+      //     for (var i = 1; i < 100; i += 2) {
+      //       numbers.push(i);
+      //     }
+      //     return numbers;
+      //   };
+      //   console.log(arrNumbers());
+
+      // Bài 92: Tìm ước số chung lớn nhất của 2 số nguyên dương
+
+      // const findNumber = (a, b) => {
+      //   while ( a != b) {
+      //       if (a > b) {
+      //           a = a - b;
+      //           console.log('a', a)
+      //       } else {
+      //           b = b -a;
+      //           console.log('b', b)
+      //       }
+      //   }
+      //   return a;
+      // }
+      // console.log(findNumber(100, 1))
+
+      // Bài 93: Viết chương trình kiểm tra 1 số có phải là số nguyên tố hay không
+      //   var s = 0;
+      //   const soNguyenTo = (a) => {
+      //     for (var i = 1; i <= a; i++) {
+      //       if (a % i == 0) {
+      //         s = s + 1;
+      //       }
+      //     }
+      //     {s == 2 ? console.log(a, " - là số nguyên tố") : console.log(a, " ko phải là số nguyên tố")}
+
+      //   };
+      //   soNguyenTo(6);
+
+      // Bài 94: Viết chương trình in ra tất cả các số lẻ nhỏ hơn 100 trừ các số 5, 7, 93
+      //   var arrNumber = [];
+      //   const soLe = () => {
+      //     for (var i = 1; i < 100; i += 2) {
+      //         if (i != 5 && i != 7 && i != 93) {
+      //             arrNumber.push(i)
+      //         }
+      //     }
+      //     return arrNumber
+      //   }
+      //   console.log(soLe())
+
+      // Bài 95: Viết chương trình nhập 3 số thực. Hãy thay tất cả các số âm bằng trị tuyệt đối của nó
+      //   result = [];
+      //   const soTuyetDoi = (a, b, c) => {
+      //     result.push(Math.abs(a),Math.abs(b),Math.abs(c))
+      //     return result
+      //   }
+      //   console.log(soTuyetDoi(-5, -6 ,9)) //[5, 6, 9]
+
+      // Bài 96: Viết chương trình nhập giá trị x sau tính giá trị của hàm số
+      // f(x) = 2x^2 + 5x + 9 khi x >= 5, f(x) = -2x^2 + 4x – 9 khi x < 5
+      //   var s = 0;
+      //   const findS = (x) => {
+      //     if (x >= 5) {
+      //       s = 2 * x * x + 5 * x + 9;
+      //     } else {
+      //       s = -2 * x * x + 4 * x - 9;
+      //     }
+      //     return s;
+      //   };
+      //   console.log(findS(1)); //-7
+
+      // Bài 97: Viết chương trình nhập 3 cạnh của 1 tam giác, cho biết đó là tam giác gì
+
+      //   const trientle = (a, b, c) => {
+      //     if (a + b > c && b + c > a && a + c > b) {
+      //       if (a == b && b == c) {
+      //         console.log("Đây là tam giác đều");
+      //       } else if (a == b || b == c || c == a) {
+      //         console.log("Đây là tam giác cân");
+      //       } else if (
+      //         a * a + b * b == c * c ||
+      //         a * a == b * b + c * c ||
+      //         b * b == a * a + c * c
+      //       ) {
+      //         console.log("Đây là tam giác vuông");
+      //       } else {
+      //         console.log("Đây là tam giác ko xác định");
+      //       }
+      //     } else {
+      //       console.log("Đây ko phai là tam giác");
+      //     }
+      //   };
+      //   trientle(2, 2, 2);
+
+      // Bài 98: Lập chương trình giải hệ: ax + by = c
+      // Dx + ey = f. Các hệ số nhập từ bàn phím
+
+      // Bài 99: Viết chương trình nhập vào 3 số thực. Hãy in 3 số ấy ra màn hình theo thứ tự tăng dần mà chỉ dùng tối đa 1 biến phụ
+    //   const numbers = [];
+    //   const numbersSort = (a, b, c) => {
+    //     numbers.push(a, b, c);
+    //     numbers.sort();
+    //   };
+    //   console.log(numbers);
+    //   numbersSort(2, 8, 3);
+    </script>
+  </body>
+</html>
