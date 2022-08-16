@@ -182,45 +182,97 @@
       //   });
       //   console.log(sum2);
 
-      var orders = [
-        {
-          name: "Khóa học HTML - CSS Pro",
-          price: 3000000,
-        },
-        {
-          name: "Khóa học Javascript Pro",
-          price: 2500000,
-        },
-        {
-          name: "Khóa học React Pro",
-          price: 3200000,
-        },
-      ];
+      //   var orders = [
+      //     {
+      //       name: "Khóa học HTML - CSS Pro",
+      //       price: 3000000,
+      //     },
+      //     {
+      //       name: "Khóa học Javascript Pro",
+      //       price: 2500000,
+      //     },
+      //     {
+      //       name: "Khóa học React Pro",
+      //       price: 3200000,
+      //     },
+      //   ];
 
       //   Cách làm việc của filter
-      var baiHoc = orders.filter((course) => {
-        return course.price > "2600000";
-      });
-      console.log(baiHoc);
+      //   var baiHoc = orders.filter((course) => {
+      //     return course.price > "2600000";
+      //   });
+      //   console.log(baiHoc);
 
-      Array.prototype.filter2 = function (callback) {
+      //   Array.prototype.filter2 = function (callback) {
+      //     var output = [];
+      //     for (var i in this) {
+      //       if (this.hasOwnProperty(i)) {
+      //         var result = callback(this[i]);
+      //         if (result) {
+      //           output.push(result);
+      //         }
+      //       }
+      //     }
+      //     return output;
+      //   };
+      //   var baiHoc1 = orders.filter2((course) => {
+      //     if (course.price > "2600000") {
+      //       return course;
+      //     }
+      //   });
+      //   console.log(baiHoc1);
+      // const numbers = [1, 2, 3, 4];
+      // // var baiHoc = numbers.filter((number) => {
+      // //     return number % 2 === 0;
+      // //   });
+      // //   console.log(baiHoc);
+
+      //   Array.prototype.myFilter = function (cb) {
+      //     var output = [];
+      //     for (var i in this) {
+      //       if (this.hasOwnProperty(i)) {
+      //         var result = cb(this[i], i, this);
+      //         if (result) {
+      //           output.push(result);
+      //         }
+      //       }
+      //     }
+      //     return output;
+      //   };
+      //   var baiHoc1 = numbers.myFilter((number) => {
+      //     if (number % 2 === 0) {
+      //       return number;
+      //     }
+      //   });
+      //   var baiHoc2 = numbers.myFilter((number, index) => {
+      //     if (index % 2 === 0) {
+      //       return number;
+      //     }
+      //   });
+      //   var baiHoc3 = numbers.myFilter((number, index, array) => {
+      //     if (array.length % 2 === 0) {
+      //       return number;
+      //     }
+      //   });
+      //   console.log(baiHoc1);
+      //   console.log(baiHoc2);
+      //   console.log(baiHoc3);
+
+      const numbers = [1, 2, 3, 4];
+      Array.prototype.myFilter = function (cb) {
         var output = [];
-        for (var i in this) {
-          if (this.hasOwnProperty(i)) {
-            var result = callback(this[i]);
+
+        for (var index in this) {
+          if (this.hasOwnProperty(index)) {
+            var result = cb(this[index], index, this);
             if (result) {
-              output.push(result);
+              output.push(this[index]);
             }
           }
         }
+
         return output;
       };
-      var baiHoc1 = orders.filter2((course) => {
-        if (course.price > "2600000") {
-          return course;
-        }
-      });
-      console.log(baiHoc1);
     </script>
   </body>
 </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading" class="heading">Hello anh em</h1>
+    <div class="box">
+      <h1 class="heading1">Hello anh em</h1>
+      <li></li>
+      <h1 class="heading2">Hello anh em</h1>
+    </div>
+
+    <script>
+      /*
+        DOM - Document Object Model 
+        1. Element: ID, class, tag, CSS selector, HTML collection
+        2. Attribute
+        3.Text
+        **/
+      //   var headingNode = document.getElementById("heading");
+
+      //   var headingNodes = document.getElementsByClassName("heading1");
+      //   //Trả về 1 mảng
+
+      //   var headingNode1 = document.getElementsByTagName("h1");
+
+      //   var headingNode2 = document.querySelector(".box .heading2:first-child");
+      //   //Lấy phần tử đầu tiên :first-child :nth-child(2)
+
+      //   var headingNode3 = document.querySelectorAll("heading2");
+      //   //Lấy phần tử đầu tiên.
+
+      //   //    console.log(headingNode3)
+      //   console.log(headingNodes);
+      //   //    console.log(headingNode2)
+
+      //   var productsListElement =
+      //     document.getElementsByClassName("products-list")[0];
+      //   var firstProductElement = document.querySelector(".product");
+      //   var buttonElements = document.getElementsByTagName("button");
+
+      //   var headingElement = document.querySelector("h1");
+
+      //   //Thêm attribute cho element (Hợp lệ) - seter gắn attribute cho nó
+      //   headingElement.title = "heading";
+      //   //Thêm attribute cho element khi att ko nhất thiết hợp lệ function(att, value)
+      //   headingElement.setAttribute("data","heading");
+
+      //   //Lấy value của attribute của element (Hợp lệ)
+      //   headingElement.title;
+      //   //Lấy value của attribute của element (Có thể ko hợp lệ)
+      //   headingElement.getAttribute('class')
+
+      //innerText get sẽ trả lại những gì mình nhìn thấy trên DOM (display none - sẽ ko hiển thị )
+      //textContent get sẽ trả vể những gì có nguyên bản (display none - có hiển thị )
+      // var headingElement = document.querySelector('.heading')
+      //Lấy ra value của element
+      // console.log(headingElement.innerText)
+      // console.log(headingElement.textContent)
+
+      //Thêm hoặc sửa value của element
+      // headingElement.innerText = 'Hello world'
+      // headingElement.textContent = 'Hello world'
+
+      //innerHTML & outerHTML
+      //   var headingElement = document.querySelector(".heading");
+      //setter
+      //   headingElement.innerHTML = "<h2>Heading 22</h2>";
+      //Thay thế luôn cái element hiện tại
+      //   headingElement.outerHTML = "<div>Heading 33</div>";
+
+      //getter
+      //   console.log(headingElement.innerHTML);
+
+      // var courses = ["HTML & CSS", "Javascript", "PHP", "Java"];
+
+      // function render(courses) {
+      //   for (var i = 0; i < courses.length; i++) {
+      //     return (document.querySelector("li").innerHTML = courses[i]);
+      //   }
+      // }
+      // console.log(render(courses))
+
+      
+      // console.log(numbers.parseInt())
+      console.log(Number(numbers))
+    </script>
+  </body>
+</html>
