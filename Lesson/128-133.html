@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello ae!</h1>
+    <script>
+      //           Bài tập kỹ thuật nhập, xuất mảng
+      //   Bài 128 + 130: Viết hàm nhập, xuất mảng 1 chiều các số thực
+      //   var arr = [1, 2, -2, -1.5, 6.5, "chu", '8'];
+      //   var newArr = [];
+      //   const findNum = () => {
+      //     for (var i = 0; i < arr.length; i++) {
+      //       if (isNaN(`${arr[i]}`) != true) {
+      //         newArr.push(arr[i]);
+      //       }
+      //     }
+      //     return newArr;
+      //   };
+      //   console.log(findNum());
+
+      //   Bài 129 + 131: Viết hàm nhập, xuất mảng 1 chiều các số nguyên
+    //   var arr = [1, 2, -2, -1.5, 6.5, "chu"];
+    //   var newArr = [];
+    //   const findNum = () => {
+    //     for (var i = 0; i < arr.length; i++) {
+    //       if (isNaN(`${arr[i]}`) != true) {
+    //         if (arr[i].toFixed() == arr[i]) {
+    //           newArr.push(arr[i]);
+    //         }
+    //       }
+    //     }
+    //     return newArr;
+    //   };
+    //   console.log(findNum());
+
+      //   Bài 132: Viết hàm liệt kê các giá trị chẵn trong mảng 1 chiều các số nguyên
+    //   var arr = [1, 2, -2, -1.5, 6.5, "chu"];
+    //   var newArr = [];
+    //   const findNum = () => {
+    //     for (var i = 0; i < arr.length; i++) {
+    //       if (isNaN(`${arr[i]}`) != true) {
+    //         if (arr[i].toFixed() == arr[i] && arr[i] % 2 == 0) {
+    //           newArr.push(arr[i]);
+    //         }
+    //       }
+    //     }
+    //     return newArr;
+    //   };
+    //   console.log(findNum());
+
+      //   Bài 133: Viết hàm liệt kê các vị trí mà giá trị tại đó là giá trị âm trong mảng 1 chiều các số thực
+      var arr = [1, 2, -2, -1.5, 6.5, "chu"];
+      var newArr = [];
+      const findNum = () => {
+        for (var i = 0; i < arr.length; i++) {
+          if (isNaN(`${arr[i]}`) != true) {
+            if (arr[i] < 0) {
+              newArr.push(arr[i]);
+            }
+          }
+        }
+        return newArr;
+      };
+      console.log(findNum());
+    </script>
+  </body>
+</html>
