@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello ae!</h1>
+    <script>
+      //Kỹ thuật đặt lính canh, các bài tập cơ bản
+
+      // Bài 134: Viết hàm tìm giá trị lớn nhất trong mảng 1 chiều các số thực
+      // var a = 0;
+      // var arr = [1, 2, -2, -1.5, 6.5, "chu"];
+      // var newArr = [];
+      // const findNum = () => {
+      //   for (var i = 0; i < arr.length; i++) {
+      //     if (isNaN(`${arr[i]}`) != true) {
+      //       if (arr[i] > a) {
+      //         a = arr[i];
+      //       }
+      //     }
+      //   }
+      //   return a;
+      // };
+      // console.log(findNum());
+
+      // Bài 135: Viết hàm tìm giá trị dương đầu tiên trong mảng 1 chiều các số thực. Nếu mảng không có giá trị dương thì trả về -1
+      // var a = 0;
+      // var arr = [-2, 1, -2, 2, -1.5, -6.5, "chu"];
+      // var newArr = [];
+      // const findNum = () => {
+      //   for (var i = 0; i < arr.length; i++) {
+      //     if (isNaN(`${arr[i]}`) != true) {
+      //       if (arr[i] > 0) {
+      //         a = arr[i];
+      //         break;
+      //       }
+      //     }
+      //   }
+
+      //   if (a == 0) {
+      //     console.log("-1");
+      //   } else {
+      //     console.log(a)
+      //   }
+      // };
+      // findNum();
+
+      // Bài 136: Tìm số chẵn cuối cùng trong mảng 1 chiều các số nguyên. Nếu mảng không có giá trị chẵn thì trả về -1
+      // var a = 0;
+      // var arr = [-2, 1, -2, 3, -1.5, -6.5, "chu"];
+      // var newArr = [];
+      // const findNum = () => {
+      //   for (var i = 0; i < arr.length; i++) {
+      //     if (isNaN(`${arr[i]}`) != true) {
+      //       if (arr[i].toFixed() == arr[i] && arr[i] % 2 == 0) {
+      //         a = arr[i];
+
+      //       }
+      //     }
+      //   }
+
+      //   if (a == 0) {
+      //     console.log("-1");
+      //   } else {
+      //     console.log(a)
+      //   }
+      // };
+      // findNum();
+
+      // Bài 137: Tìm 1 vị trí mà giá trị tại vị trí đó là giá trị nhỏ nhất trong mảng 1 chiều các số thực
+      // var a = 999;
+      // var arr = [-2, 1, -2, 2, -1.5, -6.5, "chu"];
+      // var newArr = [];
+      // const findNum = () => {
+      //   for (var i = 0; i < arr.length; i++) {
+      //     if (isNaN(`${arr[i]}`) != true) {
+      //       if (arr[i] < a) {
+      //         a = arr[i];
+      //         b = i
+
+      //       }
+      //     }
+      //   }
+      //   console.log(b)
+      // };
+      // findNum();
+
+      // Bài 138: Tìm vị trí của giá trị chẵn đầu tiên trong mảng 1 chiều các số nguyên. Nếu mảng không có giá trị chẵn thì sẽ trả về -1
+      // var a = 0;
+      // var arr = [-2, 1, -2, 2, -1.5, -6.5, "chu"];
+      // var newArr = [];
+      // const findNum = () => {
+      //   for (var i = 0; i < arr.length; i++) {
+      //     if (isNaN(`${arr[i]}`) != true) {
+      //       if (arr[i].toFixed() == arr[i] && arr[i] % 2 == 0) {
+      //         a = arr[i];
+      //         b = i
+      //         break;
+      //       }
+      //     }
+      //   }
+
+      //   if (a == 0) {
+      //     console.log("-1");
+      //   } else {
+      //     console.log(b)
+      //   }
+      // };
+      // findNum();
+
+      // Bài 139: Tìm vị trí số hoàn thiện cuối cùng trong mảng 1 chiều các số nguyên. Nếu mảng không có số hoàn thiện thì trả về giá trị -1
+      // var a = 0;
+      // var arr = [-2, 1, 6, 2, -1.5, -6.5, "chu"];
+      // var newArr = [];
+      // const findNum = () => {
+      //   for (var i = 0; i < arr.length; i++) {
+      //     if (isNaN(`${arr[i]}`) != true) {
+      //       if (arr[i].toFixed() == arr[i]) {
+      //         console.log(arr[i])
+      //         for (var j = 0; j <= arr[i] / 2; j++) {
+      //           if (arr[i] % j == 0) {
+      //             newArr.push(j);
+      //             for (var k = 0; k <= newArr.length; k++) {
+      //               total = newArr.reduce((total, uocSo) => {
+      //                 console.log("🚀 ~ file: 134-141.html ~ line 129 ~ findNum ~ total", total)
+      //                 return total + uocSo[k], 0
+      //               })
+      //               if (total == arr[i]) {
+      //                 console.log(arr[i])
+      //               }
+      //             }
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+
+      // if (a == 0) {
+      //   console.log("-1");
+      // } else {
+      //   console.log(b);
+      // }
+      // };
+      // findNum();
+      //KHÔNG GIẢI ĐƯỢC
+
+      // Bài 140: Hãy tìm giá trị dương nhỏ nhất trong mảng 1 chiều các số thực. Nếu mảng không có giá trị dương thì sẽ trả về -1
+      // var a = 999;
+      // var arr = [-2, 1, -2, 2, -1.5, 0.5, "chu"];
+      // var newArr = [];
+      // const findNum = () => {
+      //   for (var i = 0; i < arr.length; i++) {
+      //     if (isNaN(`${arr[i]}`) != true) {
+      //       if (arr[i] > 0) {
+      //         if (arr[i] < a) {
+      //           a = arr[i]
+      //         }
+      //       }
+      //     }
+      //   }
+
+      //   if (a == 999) {
+      //     console.log("-1");
+      //   } else {
+      //     console.log(a);
+      //   }
+      // };
+      // findNum();
+
+      // Bài 141: Hãy tìm vị trí giá trị dương nhỏ nhất trong mảng 1 chiều các số thực. Nếu mảng không có giá trị dương thì trả về -1
+      var a = 999;
+      var arr = [-2, 1, -2, 2, -1.5, 0.5, "chu"];
+      var newArr = [];
+      const findNum = () => {
+        for (var i = 0; i < arr.length; i++) {
+          if (isNaN(`${arr[i]}`) != true) {
+            if (arr[i] > 0) {
+              if (arr[i] < a) {
+                a = arr[i]
+                b = i;
+              }
+            }
+          }
+        }
+
+        if (a == 999) {
+          console.log("-1");
+        } else {
+          console.log(b);
+        }
+      };
+      findNum();
+    </script>
+  </body>
+</html>
